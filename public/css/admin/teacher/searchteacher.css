@@ -1,0 +1,37 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+form input{
+    padding: 8px 30px;
+    font-size: 1rem;
+    margin: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px #000000a1;
+}
+#after{
+    display: flex;
+    flex-direction: column;
+}
+#after table th{
+    background-color: aqua;
+}
+#after table tr{
+ background-color: rgba(119, 134, 134, 0.514);
+}
+#after table td{
+    text-align: center;
+    padding: 5px 10px;
+}

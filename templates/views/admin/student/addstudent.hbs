@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/admin/adminheader.css">
+    <link rel="stylesheet" href="../../css/admin/student/addstudent.css">
+</head>
+<body>
+
+    {{>adminheader}}
+    {{#if addstudent}}
+    <div id="after">
+        <p>Name : {{addstudent.name}}</p>
+        <p>DOB : {{addstudent.dob}}</p>
+        <p>Gender : {{addstudent.gender}}</p>
+        <p>Phone : {{addstudent.phone1}}, {{addstudent.phone2}}</p>
+        <p>Blood Group : {{addstudent.blood}}</p>
+        <p>Email : {{addstudent.email}}</p>
+        <p>address1 : {{addstudent.address1}}</p>
+        <p>address2: {{addstudent.address2}}</p>
+        <p>Pincode : {{addstudent.pincode}}</p>
+        <p>aadhar : {{addstudent.aadhar}}</p>
+    </div>
+    {{/if}}
+    <div class="form">
+        <h1>Add Student</h1>
+        <form action="/admin/student/addstudent" method="POST">
+        <input type="text" name="name" placeholder=" Full Name">
+
+        <label for="dob">DOB</label>
+        <input id="dob" type="Date" name="dob" placeholder="Date of Birth">
+
+        <div class="gender">
+            <input id="
+        male" type="radio" name="gender" value="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female">
+         <label for="female">Female</label>
+        </div>
+
+         <input type="number" name="phone1" placeholder="Phone Number">
+         <input type="number" name="phone2" placeholder="alternate Number">
+
+         <input type="text" name="blood" placeholder="Blood Group">
+
+         <input type="email" name="email" placeholder="Email">
+
+         <div class="address">
+            <input type="text" name="address1" placeholder="address1">
+            <input type="text" name="address2" placeholder="address2">
+            <input type="number" name="pincode" placeholder="Pincode">
+         </div>
+        
+        <input type="number" name="aadhar" placeholder="aadhar number">
+
+        <input id="btn" type="submit" value="Submit">
+        </form>
+        
+    </div>
+    
+    
+    <script src="../../js/admin/adminhome.js"></script>
+    
+</body>
+</html>

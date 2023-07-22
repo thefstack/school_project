@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Student</title>
+    <link rel="stylesheet" href="../../css/admin/adminheader.css">
+    <link rel="stylesheet" href="../../css/admin/teacher/searchteacher.css">
+</head>
+<body>
+    {{>adminheader}}
+    
+    <div class="form">
+        <h1>Search Teacher</h1>
+        <form action="/admin/teacher/searchteacher" method="POST">
+            <input type="text" name="id" placeholder="Teacher Id">
+
+            <input type="submit" value="Search">
+        </form>
+        
+    </div>
+
+    {{#if searchteacher}}
+    <div id="after">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Phone</th>
+            </tr>
+            {{#each searchteacher}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{name}}</td>
+                <td>{{gender}}</td>
+                <td>
+                    <p>{{phone1}}</p>
+                    <p>{{phone2}}</p>
+                </td>
+
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+    {{/if}}
+
+    <script src="../../js/admin/adminhome.js"></script>
+</body>
+</html>

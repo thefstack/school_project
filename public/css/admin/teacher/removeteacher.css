@@ -1,0 +1,23 @@
+.form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+form input{
+    padding: 8px 30px;
+    font-size: 1rem;
+    margin: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px #000000a1;
+}

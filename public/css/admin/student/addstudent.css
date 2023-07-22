@@ -1,0 +1,52 @@
+input[type="number"]{
+    appearance: textfield;
+}
+.form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form form .address{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    width: 250px;
+    padding: 5px 20px;
+    margin: 10px 0px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #000000;
+    font-size: 1rem;
+}
+form .gender input{
+    width: 30px;
+}
+form input[type="submit"]{
+    margin: 20px 0 30px 0;
+    width: fit-content;
+    font-size: 1rem;
+    padding: 10px 30px;
+}
+form input[type="radio"]{
+    box-shadow: none;
+}
+#after{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: start;
+    text-align: left;
+    padding: 20px 2px;
+    width: fit-content;
+    margin: 0px auto;
+}

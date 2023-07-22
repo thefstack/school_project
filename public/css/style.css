@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    font-family:'Rubik', sans-serif;
+    min-width: 300px;
+}
+.container{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header-top{
+    text-align: center;
+    padding: 10px 40px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: rgb(42, 73, 146);
+    color: #fff;
+}
+.header-mid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #565555;
+    padding: 5px 40px;
+    overflow: hidden;
+
+}
+.header-mid .left{
+    width: 50%;
+}
+.header-mid .left marquee a{
+    margin: 0 50px;
+    color: #fff;
+}
+.header-mid i{
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.header-mid i:last-child{
+    margin-right: 0;
+}
+.header-mid i:hover{
+    color: #3861f4;
+}
+.header-mid .loginsignup{
+    margin: 5px;
+}
+.header-mid .loginsignup a{
+    padding:5px;
+    background-color: #A2FF86;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.header-mid .loginsignup a:hover{
+    color: #000000;
+}
+
+.header-bottom{
+    display: flex;
+    align-items: center;
+    padding: 10px 40px ;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px #5a575758;
+    position: relative;
+    gap: 30px;
+}
+.header-bottom .logo{
+    width: 80px;
+}
+.header-bottom .logo img{
+    width: 100%;
+}
+.header-bottom .menu i{
+    font-size: 3rem;
+    cursor: pointer;
+}
+.header-bottom .menu .nav{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #d0c9c9;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding-bottom: 100px;
+    z-index: 99;
+}
+
+
+.header-bottom .menu .nav a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    padding: 10px;
+}
+
+
+
+/* Styling Welcome container  */
+.welcomecontainer{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+.welcomecontainer .welcome{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomecontainer .welcome h1{
+    height: 400px;
+    font-size: 9rem;
+    font-weight: 700;
+    z-index: 10;
+    color: #050505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: animateh1 3s linear infinite;
+    text-shadow: 10px 10px 10px #90a3ea;
+    cursor:default;
+}
+@keyframes animateh1 {
+    0%{
+
+    }
+    50%{
+
+        transform: translateY(2%);
+    }
+    100%{}
+}
+
+.welcomecontainer video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.74;
+}
+
+
+
+/* styling  missionandvalues */
+.missionandvalues{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 50px 50px;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+.missionandvalues .mycontainerleft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 10px #28282870;
+    border-radius: 20px;
+    padding: 25px 50px;
+    min-width: 270px;
+    background-color: #fff;
+}
+.missionandvalues .mycontainerleft h1{
+    font-size: 4rem;
+    font-weight: 900;
+}
+.missionandvalues .mycontainerleft p{
+    font-size: 1.3rem;
+    margin: 70px 30px;
+    text-align: center;
+}
+.missionandvalues .mycontainerleft p:first-child{
+    margin-top: 0px;
+}
+
+
+.missionandvalues .mycontainerright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 10px #28282870;
+    border-radius: 20px;
+    padding: 25px 50px;
+    background-color: #fff;
+}
+.missionandvalues .mycontainerright h1{
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+#values{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+
+}
+#values .value{
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#values .value:hover{
+    transform: scale(1.1);
+}
+#values .value img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+#values .value img:hover{
+    transform: scale(1.1);
+    width: 270px;
+    height: 220px;
+}
+#values .value .hovertext{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    padding: 10px 15px;
+    transform: translateY(150%);
+    transition: 0.8s;
+    background-color: #0000009b;
+    height: 100%;
+    color: #fff;
+
+    
+}
+#values .value .hovertext h2{
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+#values .value:hover .hovertext{
+    transform: translateY(0);
+}
+
+
+
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: #3F2305;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+.footer p{
+    margin: 10px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media  */
+@media(max-width:1100px){
+    .missionandvalues .mycontainerright{
+        padding: 25px 10px;
+    }
+}
+@media(max-width:900px){
+    .missionandvalues{
+        flex-direction: column;
+    }
+    .header-mid{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .header-mid .left{
+        width: 100%;
+    }
+}
+
+@media(max-width:1300px)
+{
+    #values{
+        grid-template-columns: 40vw;
+    }
+    #values .value{
+        margin: auto;
+    }
+}
+@media(max-width:520px){
+    .missionandvalues .mycontainerleft{
+        padding: 0;
+    }
+    #values{
+        grid-template-columns: 400px;
+    }
+    .missionandvalues{
+        padding: 10px;
+    }
+    .footer p{
+        font-size: 1rem;
+    }
+}
+
+
+@media(max-width:650px){
+    .welcomecontainer .welcome h1{
+        font-size: 5rem;
+    }
+    .welcomecontainer{
+        height: 400px;
+    }
+}
+@media(max-width:534px){
+    .welcomecontainer .welcome h1{
+        font-size: 3rem;
+    }
+}
+@media(max-width:400px){
+    .welcomecontainer{
+        height: 300px;
+    }
+}
+
+
+

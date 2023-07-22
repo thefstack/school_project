@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Student</title>
+    <link rel="stylesheet" href="../../css/admin/adminheader.css">
+    <link rel="stylesheet" href="../../css/admin/student/updatestudent.css">
+</head>
+<body>
+    {{>adminheader}}
+    
+    <div class="form2">
+        <h1>Update Student Details</h1>
+        <form action="/admin/student/updatestudent" method="POST">
+
+        <input type="text" name="id" placeholder="Student Id" required>
+
+        <input type="submit" value="Submit">
+        </form>
+        
+    </div>
+
+    {{#if data}}
+    <div id="after">
+        <h1>Enter Details to Update</h1>
+        <form action="/admin/student/updatestudentdetails" method="post">
+            <input type="text" name="id" value="{{data.id}}">
+
+            <input id="name" type="text" name="name" placeholder=" Full Name" value="{{data.name}}" onchange="update(this.id)">
+
+        <label for="dob">DOB</label>
+        <input id="dob" type="Date" name="dob" placeholder="Date of Birth" value="{{data.dob}}" onchange="update(this.id)">
+
+        <div class="gender">
+            <input id="
+        male" type="radio" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female">
+         <label for="female">Female</label>
+        </div>
+
+         <input id="phone1" type="number" name="phone1" placeholder="Phone Number" value="{{data.phone1}}" onchange="update(this.id)">
+         <input id="phone2" type="number" name="phone2" placeholder="alternate Number" value="{{data.phone2}}" onchange="update(this.id)">
+
+         <input id="blood" type="text" name="blood" placeholder="Blood Group" value="{{data.blood}}" onchange="update(this.id)">
+
+         <input id="email" type="email" name="email" placeholder="Email" value="{{data.email}}" onchange="update(this.id)">
+
+         <div class="address">
+            <input id="address1" type="text" name="address1" placeholder="address1" value="{{data.address1}}" onchange="update(this.id)">
+            <input id="address2" type="text" name="address2" placeholder="address2" value="{{data.address2}}" onchange="update(this.id)">
+            <input id="pincode" type="number" name="pincode" placeholder="Pincode" value="{{data.pincode}}" onchange="update(this.id)">
+         </div>
+        
+        <input id="aadhar" type="number" name="aadhar" placeholder="aadhar number" value="{{data.aadhar}}" onchange="update(this.id)">
+
+        <input type="submit" value="Update Details">
+        </form>
+    </div>
+    {{/if}}
+    {{#if update}}
+    <div id="updatetrue">
+        <p>Updation Successfull</p>
+    </div>
+    {{/if}}
+
+    
+
+    <script src="../../js/admin/adminhome.js"></script>
+    <script src="../../js/admin/student/updatestudent.js"></script>
+
+</body>
+</html>

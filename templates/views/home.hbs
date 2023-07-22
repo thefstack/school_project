@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>RSMEDS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+     
+        {{>header}}
+        
+        <section class="welcomecontainer">
+            <video id="welcome-video" src="https://v4.cdnpk.net/videvo_files/video/free/video0485/large_watermarked/_import_61a6153d466751.95102657_FPpreview.mp4" autoplay loop muted></video>
+            <div class="welcome">
+                <h1>Welcome</h1>
+            </div>        
+        </section>
+    
+    
+        <section class="missionandvalues">
+            <div class="mycontainerleft">
+                <h1>Mission</h1>
+                <div class="mission">
+                <p>We are committed to fostering the holistic development of each child, recognizing their unique strengths, interests, and needs</p>
+                <p>We aim to cultivate a sense of wonder and a lifelong passion for exploration and discovery.</p>
+                <p>We foster a sense of belonging, respect, and kindness within our school community.</p>
+                <p>We strive to maintain open lines of communication and create opportunities for parent involvement and engagement in their child's learning journey.</p>
+                <p>Our school is committed to creating a solid educational foundation that prepares children for a successful transition to Secondary school while nurturing their natural curiosity, love for learning, and joy in the process.</p>
+            </div>
+            </div>
+            <div class="mycontainerright">
+                <h1>Values</h1>
+                <div id="values">
+                <div class="value">
+                    <img src="images/joyoflearning.jpg" alt="">
+                    <div class="hovertext">
+                    <h2>Joy of learning</h2>
+                    <p>Cultivating a love for learning by making education enjoyable, engaging, and meaningful for young children.</p>
+                    </div>
+                </div>
+                <div class="value">
+                    <img src="images/creativity.jpg" alt="">
+                    <div class="hovertext">
+                        <h2>Creativity</h2>
+                        <p>Encouraging children to express themselves, think creatively, and explore their imaginations through various art forms and activities.</p>
+                    </div>
+                </div>
+                <div class="value">
+                    <img src="images/growth.jpg" alt="">
+                    <div class="hovertext">
+                        <h2>Growth Mindset</h2>
+                        <p>Instilling a belief in the power of effort, perseverance, and resilience, and encouraging children to embrace challenges and learn from mistakes.</p>
+                    </div>
+                </div>
+                <div class="value">
+                    <img src="images/health.jpg" alt="">
+                    <div class="hovertext">
+                        <h2>Health and Wellness</h2>
+                        <p>Promoting physical health, well-being, and a balanced lifestyle through age-appropriate activities, healthy habits, and nutrition education.</p>
+                    </div>
+                </div>
+                <div class="value">
+                    <img src="images/respect.jpg" alt="">
+                    <div class="hovertext">
+                        <h2>Respect</h2>
+                        <p>Promoting respect for oneself, others, and the environment, and fostering an inclusive and diverse community.</p>
+                    </div>
+                </div>
+                <div class="value">
+                    <img src="images/environment.jpg" alt="">
+                    <div class="hovertext">
+                        <h2>Environmental Consciousness</h2>
+                        <p>Instilling a sense of environmental responsibility and sustainability, and teaching children to appreciate and care for the natural world.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        {{>footer}}
+    
+    </div>
+
+
+    <!-- Scripts  -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>  
+
+    <script src="js/myscript.js"></script>
+</body>
+</html>

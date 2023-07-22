@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Student</title>
+    <link rel="stylesheet" href="../../css/admin/adminheader.css">
+    <link rel="stylesheet" href="../../css/admin/teacher/removeteacher.css">
+</head>
+<body>
+    {{>adminheader}}
+    
+    <div class="form">
+        <h1>Remove Teacher</h1>
+        <form action="/admin/teacher/deleteteacher" method="POST">
+            <input type="text" placeholder="Teacher Id" name="id" required>
+
+            <input type="submit" value="Remove">
+        </form>
+        
+    </div>
+    {{#if _id}}
+    <div id="after">
+        <p>Student Deleted with Id: {{_id}}</p>
+    </div>
+    {{/if}}
+    
+
+    <script src="../../js/admin/adminhome.js"></script>
+</body>
+</html>
