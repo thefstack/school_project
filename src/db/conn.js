@@ -1,5 +1,5 @@
 const mongoose=require("mongoose");
-mongoose.connect('mongodb://127.0.0.1:27017/School').then(()=>{
+mongoose.connect('mongodb+srv://thefstackschool:thefstackRaj@cluster0.anosjwz.mongodb.net/School?retryWrites=true&w=majority').then(()=>{
     console.log("School Database Connected");
 }).catch((e)=>{
     console.log("School Database Connection Failed");

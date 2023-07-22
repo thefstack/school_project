@@ -7,15 +7,13 @@ const hbs=require('hbs');
 
 const port= process.env.PORT || 8000;
 
-require("./db/conn") //requiring database connection
+
 
 
 
 const viewPath=path.join(__dirname,"../templates/views");
 const partialPath=path.join(__dirname,"../templates/partials");
 const publicPath=path.join(__dirname,"../public");
-
-
 
 
 app.set('view engine', 'hbs');

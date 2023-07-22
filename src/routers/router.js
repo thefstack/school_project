@@ -5,6 +5,8 @@ const bcrypt=require('bcryptjs');
 const cookieParser=require('cookie-parser');
 const auth=require("../middleware/auth");
 
+require("../db/conn") //requiring database connection
+
 
 //to store in database we need to access or require the model but here we just want to match the user name and password
 
