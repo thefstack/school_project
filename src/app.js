@@ -31,6 +31,5 @@ app.use(router);
 
 
 app.listen(port,()=>{
-    console.log(`Listening to the Server`);
-    console.log(`http://192.168.154.216:8000`)
+    console.log(`Server is Online`);
 })

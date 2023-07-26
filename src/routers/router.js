@@ -38,7 +38,7 @@ router.get("/adminlogin", (req, res) => {
 
 
 // admin student router 
-router.get('/admin/admin',auth,(req,res)=>{
+router.get('/admin',auth,(req,res)=>{
     res.status(200).render('admin/admin');
 })
 
@@ -76,8 +76,6 @@ router.get("/admin/teacher/searchteacher",auth, (req, res) => {
 // admin router to logout 
 router.get("/logout",auth,async(req,res)=>{
     try{
-        
-        console.log("cookies cleared")
         try{
             req.user.tokens= req.user.tokens.filter((index)=>{
                 return index.token != req.token;
@@ -87,7 +85,7 @@ router.get("/logout",auth,async(req,res)=>{
         }
         res.clearCookie('jwt');
         await req.user.save();
-        res.redirect(200,'home');
+        res.redirect("/");
     }catch(err){
         console.log(err);
     }
@@ -109,13 +107,14 @@ router.post("/adminlogin", async (req, res) => {
         const admin = require('../models/adminlogin');
         const _id = req.body.adminid;
         const password = req.body.password;
+
+        
         const adminid = await admin.findOne({ _id: _id });
 
         const isMatch= await bcrypt.compare(password,adminid.password);
         if (isMatch) {
             //generating token
             const token=await adminid.generateAuthToken();
-        
             //storing cookies
             res.cookie('jwt',token,{
             httpOnly:true,
@@ -123,17 +122,15 @@ router.post("/adminlogin", async (req, res) => {
             session:true
         });
             //if password match then redirect to admin/admin
-            res.redirect('admin/admin');
+            res.redirect('/admin');
         }
         else {
-            res.status(401).redirect('adminlogin');
             throw new Error("Password Mismatch")
         }
 
     } catch (error) {
         res.status(400);
-        res.send('Failed to login');
-        console.log(error);
+        res.redirect("/adminlogin");
     }
 })
 

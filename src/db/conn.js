@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
-mongoose.connect('mongodb+srv://thefstackschool:thefstackRaj@cluster0.anosjwz.mongodb.net/School?retryWrites=true&w=majority').then(()=>{
-    console.log("School Database Connected");
+mongoose.connect(process.env.MONGODB_URI).then(()=>{
+    console.log("Connected to Database");
 }).catch((e)=>{
-    console.log("School Database Connection Failed");
+    console.log("Database Connection Failed");
 });
